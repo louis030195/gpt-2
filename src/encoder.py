@@ -106,6 +106,7 @@ class Encoder:
         return text
 
 def get_encoder(model_name):
+    model_name = '117M'
     with open(os.path.join('models', model_name, 'encoder.json'), 'r') as f:
         encoder = json.load(f)
     with open(os.path.join('models', model_name, 'vocab.bpe'), 'r', encoding="utf-8") as f:
