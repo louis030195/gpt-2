@@ -29,10 +29,10 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
 
-    from .src import db
+    from . import db
     db.init_app(app)
 
-    from .src import blog
+    from . import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
 
